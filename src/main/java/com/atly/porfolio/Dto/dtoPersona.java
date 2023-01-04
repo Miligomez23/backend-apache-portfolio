@@ -1,29 +1,24 @@
-package com.atly.porfolio.entity;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
+package com.atly.porfolio.Dto;
 
 
-@Entity
-public class persona {
-    @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int id;
+
+public class dtoPersona {
+    
     private String name;
     private String alias;
     private String titulo;
     private String acercademi;
     private String bannerimg;
     private String imgpersona;
-    private String nombrecontacto; 
+    private String nombrecontacto;
     private String contacto;
     private String mail;
 
-    public persona() {
+    public dtoPersona() {
     }
 
-    public persona(String name, String alias, String titulo, String acercademi, String bannerimg, String imgpersona, String nombrecontacto, String contacto, String mail) {
+    public dtoPersona(String name, String alias, String titulo, String acercademi, String bannerimg, String imgpersona, String nombrecontacto, String contacto, String mail) {
         this.name = name;
         this.alias = alias;
         this.titulo = titulo;
@@ -33,14 +28,6 @@ public class persona {
         this.nombrecontacto = nombrecontacto;
         this.contacto = contacto;
         this.mail = mail;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -116,4 +103,5 @@ public class persona {
     }
     
     
+
 }
