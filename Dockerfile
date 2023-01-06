@@ -1,0 +1,5 @@
+
+FROM openjdk:8-jdk-alpine
+maintainer atly
+COPY target/porfolio-0.0.1-SNAPSHOT.jar porfolio-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","/porfolio-0.0.1-SNAPSHOT.jar"]
