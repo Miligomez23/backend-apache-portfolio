@@ -25,7 +25,7 @@ public class dtoPersona {
         this.acercademi = acercademi;
         this.bannerimg = bannerimg;
         this.imgpersona = imgpersona;
-        this.nombrecontacto = nombrecontacto;
+       this.nombrecontacto = nombrecontacto;
         this.contacto = contacto;
         this.mail = mail;
     }
@@ -79,14 +79,14 @@ public class dtoPersona {
     }
 
     public String getNombrecontacto() {
-        return nombrecontacto;
+       return nombrecontacto;
     }
 
     public void setNombrecontacto(String nombrecontacto) {
-        this.nombrecontacto = nombrecontacto;
+       this.nombrecontacto = nombrecontacto;
     }
 
-    public String getContacto() {
+   public String getContacto() {
         return contacto;
     }
 

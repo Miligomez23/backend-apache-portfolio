@@ -66,7 +66,7 @@ public class CExperiencia {
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
     }
     
-    @PutMapping("/update/(id)")
+    @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoExperiencia dtoexp){
         //validamos si existe el id
         if(!sExperiencia.existsById(id))

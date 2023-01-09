@@ -50,20 +50,20 @@ public class PersonaController {
     }*/
     
     /*@PostMapping("/create")
-    public ResponseEntity<?> create(@RequestBody dtoPersona dtoeducacion){
-        if(StringUtils.isBlank(dtoPersona.getDequien())){
+    public ResponseEntity<?> create(@RequestBody dtoPersona dtopersona){
+        if(StringUtils.isBlank(dtopersona.getName())){
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
-        if(personaService.existsByDequien(dtoeducacion.getDequien())){
+        if(personaService.existsByName(dtopersona.getName())){
             return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         }
         
-        Educacion educacion = new Educacion(
-                dtoeducacion.getDequien(), dtoeducacion.getFinalizado(),dtoeducacion.getImg(),dtoeducacion.getTitulo(),dtoeducacion.getCurso()
+        persona persona = new persona(
+                dtopersona.getName(), dtopersona.getAcercademi(),dtopersona.getAlias(),dtopersona.getBannerimg(),dtopersona.getTitulo(),dtopersona.getImgpersona()
             );
-        personaService.save(educacion);
+        personaService.save(persona);
         return new ResponseEntity(new Mensaje("Educacion creada"), HttpStatus.OK);
-                
+               
     }*/
     
     @PutMapping("/update/{id}")
@@ -84,9 +84,9 @@ public class PersonaController {
         persona.setAcercademi(dtopersona.getAcercademi());
         persona.setAlias(dtopersona.getAlias());
         persona.setBannerimg(dtopersona.getBannerimg());
-        persona.setContacto(dtopersona.getContacto());
+       persona.setContacto(dtopersona.getContacto());
         persona.setImgpersona(dtopersona.getImgpersona());
-        persona.setMail(dtopersona.getMail());
+       persona.setMail(dtopersona.getMail());
         persona.setNombrecontacto(dtopersona.getNombrecontacto());
         persona.setTitulo(dtopersona.getTitulo());
          

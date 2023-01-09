@@ -30,9 +30,9 @@ public class persona {
         this.acercademi = acercademi;
         this.bannerimg = bannerimg;
         this.imgpersona = imgpersona;
-        this.nombrecontacto = nombrecontacto;
-        this.contacto = contacto;
-        this.mail = mail;
+       this.nombrecontacto = nombrecontacto;
+       this.contacto = contacto;
+      this.mail = mail;
     }
 
     public int getId() {
@@ -91,24 +91,24 @@ public class persona {
         this.imgpersona = imgpersona;
     }
 
-    public String getNombrecontacto() {
-        return nombrecontacto;
+   public String getNombrecontacto() {
+       return nombrecontacto;
     }
 
-    public void setNombrecontacto(String nombrecontacto) {
+   public void setNombrecontacto(String nombrecontacto) {
         this.nombrecontacto = nombrecontacto;
-    }
+   }
 
-    public String getContacto() {
+  public String getContacto() {
         return contacto;
     }
 
     public void setContacto(String contacto) {
-        this.contacto = contacto;
+       this.contacto = contacto;
     }
 
     public String getMail() {
-        return mail;
+       return mail;
     }
 
     public void setMail(String mail) {
