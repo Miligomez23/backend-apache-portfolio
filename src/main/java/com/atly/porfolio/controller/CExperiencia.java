@@ -69,15 +69,15 @@ public class CExperiencia {
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoExperiencia dtoexp){
         //validamos si existe el id
-        if(!sExperiencia.existsById(id))
+        if(!sExperiencia.existsById(id)){
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
-        
-        if(sExperiencia.existsByLugar(dtoexp.getLugar()) && sExperiencia.getByLugar(dtoexp.getLugar()).get().getId() != id)
+        }
+        if(sExperiencia.existsByLugar(dtoexp.getLugar()) && sExperiencia.getByLugar(dtoexp.getLugar()).get().getId() != id){
             return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
-            
-        if(StringUtils.isBlank(dtoexp.getLugar()))
+        }   
+        if(StringUtils.isBlank(dtoexp.getLugar())){
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-            
+        }  
             
         Experiencia experiencia =  sExperiencia.getOne(id).get();
         experiencia.setLugar(dtoexp.getLugar());
