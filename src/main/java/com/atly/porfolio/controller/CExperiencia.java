@@ -80,6 +80,7 @@ public class CExperiencia {
         }  
             
         Experiencia experiencia =  sExperiencia.getOne(id).get();
+        
         experiencia.setLugar(dtoexp.getLugar());
         experiencia.setDonde(dtoexp.getDonde());
         experiencia.setPuesto(dtoexp.getPuesto());
